@@ -1,5 +1,5 @@
 # Linux-Process-API-fork-wait-exec-
-Ex02-Linux Process API-fork(), wait(), exec()
+Ex02-Linux Process API-fork(), wait(), exec(
 # Ex02-OS-Linux-Process API - fork(), wait(), exec()
 Operating systems Lab exercise
 
@@ -22,7 +22,7 @@ Write the C Program using Linux Process API - fork(), wait(), exec()
 Test the C Program for the desired output. 
 
 # PROGRAM:
-## C Program to print process ID and parent Process ID using Linux API system calls
+## 1.C Program to print process ID and parent Process ID using Linux API system calls
 
 ```
 #include <stdio.h>    // for printf
@@ -69,7 +69,7 @@ int main() {
 
 
 
-## C Program to create new process using Linux API system calls fork() and exit()
+## 2.C Program to create new process using Linux API system calls fork() and exit()
 ```
 #include <stdio.h>    // For printf, perror
 #include <unistd.h>   // For fork(), getpid(), getppid()
@@ -114,7 +114,7 @@ int main() {
 
 
 
-## C Program to execute Linux system commands using Linux API system calls exec() family
+## 3.C Program to execute Linux system commands using Linux API system calls exec() family
 
 
     
