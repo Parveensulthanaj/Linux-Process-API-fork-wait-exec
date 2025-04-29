@@ -60,8 +60,7 @@ int main() {
 
 
 
-
-![pid](https://github.com/user-attachments/assets/6dfc33f0-e80c-4261-85c2-1f7c96042e1f)
+![alt text](img1/pid.png)
 
 
 
@@ -108,8 +107,7 @@ int main() {
 
 
 
-![fork](https://github.com/user-attachments/assets/768156a5-0b57-4f9b-b631-b894485b9d5c)
-
+![alt text](img1/fork.png)
 
 
 
@@ -124,39 +122,35 @@ int main() {
 
 
 ```
-#include <stdio.h>      // for printf, perror
-#include <unistd.h>     // for fork, exec family
-#include <stdlib.h>     // for exit
-#include <sys/types.h>  // for pid_t
-#include <sys/wait.h>   // for wait
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 int main() {
     pid_t pid;
 
-    pid = fork(); // Create a new process
+    // Create a new process
+    pid = fork();
 
     if (pid < 0) {
-        // Fork failed
-        perror("fork failed");
-        exit(1);
-    }
-    else if (pid == 0) {
+        perror("Fork failed");
+        exit(EXIT_FAILURE);
+    } else if (pid == 0) {
         // Child process
         printf("Child Process: Executing 'ls -l'\n");
-
-        // Execute the command using execlp
-        if (execlp("ls", "ls", "-l", NULL) == -1) {
-            perror("execlp failed");
-            exit(1); // Only reached if execlp fails
-        }
-    }
-    else {
-        // Parent process
-        printf("Parent Process: PID = %d\n", getpid());
         
-        // Wait for child to complete
-        wait(NULL);
-        printf("Parent Process: Child completed\n");
+        // Replace child process image with 'ls -l' command
+        execlp("ls", "ls", "-l", (char *)NULL);
+
+        // If execlp fails
+        perror("execlp failed");
+        exit(EXIT_FAILURE);
+    } else {
+        // Parent process
+        wait(NULL);  // Wait for child to finish
+        printf("Parent Process: Child finished execution\n");
     }
 
     return 0;
@@ -190,8 +184,7 @@ int main() {
 
 
 
-![exec](https://github.com/user-attachments/assets/abf17eb2-e433-4b89-9e20-5424482e1b09)
-
+![alt text](img1/exec.png)
 
 
 
