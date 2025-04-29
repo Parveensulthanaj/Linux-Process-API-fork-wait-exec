@@ -61,7 +61,8 @@ int main() {
 
 
 
-![pid](https://github.com/user-attachments/assets/3863539b-8569-4a4d-b3f3-cfc3e91a4aa6)
+![pid](https://github.com/user-attachments/assets/6dfc33f0-e80c-4261-85c2-1f7c96042e1f)
+
 
 
 
@@ -107,7 +108,8 @@ int main() {
 
 
 
-![fork](https://github.com/user-attachments/assets/fe06796a-ccbf-4958-b0cd-ab6c745e3747)
+![fork](https://github.com/user-attachments/assets/768156a5-0b57-4f9b-b631-b894485b9d5c)
+
 
 
 
@@ -188,7 +190,8 @@ int main() {
 
 
 
-![exec](https://github.com/user-attachments/assets/36e9adcb-62f4-4e68-9e34-864eea302449)
+![exec](https://github.com/user-attachments/assets/abf17eb2-e433-4b89-9e20-5424482e1b09)
+
 
 
 
